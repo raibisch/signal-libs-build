@@ -46,15 +46,15 @@ hosts = {
                     ## macos-11 runner uses x86-64 processers.
                     ## Using a cross target aarch64-apple (below)
             #},
-        "windows": {
-                "runner": "windows-latest",
-                "lib-suffix": ".dll",
-                "triple": "x86_64-pc-windows",  # no "-msvc" because static lib, see next line
-                "rust-flags": "-C target-feature=+crt-static",
+        #"windows": {
+        #        "runner": "windows-latest",
+        #        "lib-suffix": ".dll",
+        #        "triple": "x86_64-pc-windows",  # no "-msvc" because static lib, see next line
+        #        "rust-flags": "-C target-feature=+crt-static",
                         # Static linking to remove MSVC dependendency.
                         # zkgroup/ffi/node/Makefile
                         # libsignal-client/node/build_node_bridge.py
-            },
+        #    },
         }
 
 cross_targets = [
